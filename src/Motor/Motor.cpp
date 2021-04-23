@@ -13,3 +13,7 @@ void Motor::begin(int min_pulse_width, int max_pulse_width) {
 	motor[2].controller.attach(motor[2].pin, min_pulse_width, max_pulse_width);
 	motor[3].controller.attach(motor[3].pin, min_pulse_width, max_pulse_width);
 }
+
+void Motor::set_thrust(int motor, int thrust) {
+	this->motor[motor].controller.write(thrust);
+}
