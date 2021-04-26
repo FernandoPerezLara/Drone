@@ -1,10 +1,10 @@
-#include "Communication.h"
+#include "Console.h"
 
-void Communication::begin(long speed) {
+void Console::begin(long speed) {
 	Serial.begin(speed);
 }
 
-void Communication::log(const char format[], ...) {
+void Console::log(const char format[], ...) {
 	char buf[PRINTF_BUF];
 	va_list ap;
 
@@ -14,4 +14,4 @@ void Communication::log(const char format[], ...) {
 	Serial.print(buf);
 }
 
-Communication communication;
+Console console;
