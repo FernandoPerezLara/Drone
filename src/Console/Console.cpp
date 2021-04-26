@@ -14,4 +14,12 @@ void Console::log(const char format[], ...) {
 	Serial.print(buf);
 }
 
+void Console::start_timer() {
+	start_time = millis();
+}
+
+unsigned int Console::read_timer() {
+	return millis() - start_time;
+}
+
 Console console;

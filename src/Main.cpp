@@ -11,5 +11,9 @@ void setup() {
 }
 
 void loop() {
-	
+	console.start_timer();
+
+	delay(1000);
+
+	console.log("Time: %d \n", console.read_timer());
 }
